@@ -1,0 +1,81 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2580
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0  - proceed with git tutorial on amigos code channel on YouTube.\
+https://youtu.be/3fUbBnN_H2c\
+ \
+\
+ - git config\
+ - git add, git status, touch command, etc \
+ - Commits (use the video link and move to timeline 57.51)\
+\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+COMMANDS USED IN LOCAL MACHINE:\
+- git init <folder name> :	\
+	introduces the the current directory as working folder or repository\
+\
+- git add <file name> :	adds the file to the staging area\
+- git add . :			moves all the files in the current folder to the staging area.	\
+\
+- git commit -m \'93commit description\'94:	\
+				moves the files in staging area to remote server (GitHub or etc)\
+\
+- git status:			shows the current status of the project.\
+- git log:			shows the latest log of the project by showing the commit description and the file 				names\
+\
+- git show <commit hash>: shows the files that have been committed by showing username, email, date, 				hash code name, and the files inside the commit \
+\
+- touch <filename>: 		creates a file\
+- vi <filename>:		opens the file (press i to insert content inside the file, press esc then :wq to quit 				and save the file\
+\
+- cat <filename>:		shows the content of the file\
+- git diff:			shows the changes and differences since the last commit by showing the file 				name and the changes in green color. (Press q to quit the file)\
+\
+- git restore <filename>:	restores the file back to its old content.\
+\
+- git commit --amend -m \'93new commit description\'94: \
+				it changes the commit description of the latest commit that we have done.\
+\
+COMMANDS USED TO PUSH FILES IN REMOTE SERVER (GITHUB):\
+Open a browser and navigate to github.com and create an account. After login, on the left hand side create a repository by giving a name similar to the project folder name (optional) and choosing the public option, skip the \'93Add a ReadMe file\'94 checkbox because we already created the project locally.\
+\
+PUSH AN EXISTING REPOSITORY FROM THE COMMAND LINE:\
+- git remote add origin git@github.com:habibfedaee/learning-git.git    	[press enter]\
+\
+- git branch -M main:	creates a branch called main, (replaces master in local machine to main)\
+\
+CONFIGURE THE GITHUB ACCOUNT TO BE ABLE TO PUSH INTO THE ACCOUNT:\
+Right now there is no SSH Key generated for this repository, go to settings and choose SSH and GPG Keys, then  click on \'93generating SSH keys\'94 link to learn how to create SSH key for different OS. Choose \'93Generating a new SSH key and adding it to the ssh-agent\'94 link. On Mac, Open Terminal, Paste the following text, substituting in your GitHub email address: \'93$ ssh-keygen -t ed25519 -C \'93your_email@example.com\'94, then press enter if you don\'92t want to change the default key address, enter a pass-phrase (optional or empty), enter the same pass-phrase or just enter if empty. The SSH key is generated. \
+\
+ADDING YOUR SSH KEY TO THE SSH-AGENT:\
+1. Check if your ~/.ssh/config file exists by typing this command in terminal:\
+     $ open ~/.ssh/config\
+2. If the file doesn\'92t exist, create the file:\
+    $ touch ~/.ssh/config\
+3. Open the file using the open command in step one, press i to be able to insert text.\
+4. Copy and paste the following code inside the config file:\
+    Host *\
+	AddKeysToAgent yes\
+	UseKeyChain yes\
+	IdentifyFile ~/.ssh/id_ed25519\
+5. Press esc key, then :wq to save the changes\
+6. Paste the following key to add SSH private key to the ssh-agent:\
+    $ ssh-add -K ~/.ssh/id_ed25519\
+On the current page Click on the link \'93Add the SSH key to your GitHub account.\
+1. Copy the SSH public key to the clipboard:\
+	$pbcopy < ~/.ssh/id_ed25519.pub\
+\
+GIT PUSH:\
+\
+	\
+\
+ \
+\
+\
+\
+\
+		}
